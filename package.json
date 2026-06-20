@@ -1,0 +1,76 @@
+{
+  "name": "importguard",
+  "displayName": "ImportGuard - Catch AI Hallucinated Imports",
+  "description": "Flags imports that don't exist to catch AI assistant hallucinations before they hit production. Scans JS/TS/Angular/Python files for packages and modules that aren't actually installed or don't exist.",
+  "version": "0.0.1",
+  "publisher": "khushwant-r",
+  "author": {
+    "name": "Khushwant R."
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khushwant666/importguard.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Linters",
+    "Other"
+  ],
+  "keywords": [
+    "ai",
+    "hallucination",
+    "imports",
+    "copilot",
+    "claude",
+    "cursor",
+    "linter"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact",
+    "onLanguage:javascriptreact",
+    "onLanguage:python"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "importguard.scanFile",
+        "title": "ImportGuard: Scan Current File"
+      },
+      {
+        "command": "importguard.scanWorkspace",
+        "title": "ImportGuard: Scan Entire Workspace"
+      }
+    ],
+    "configuration": {
+      "title": "ImportGuard",
+      "properties": {
+        "importguard.enableOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically scan a file for hallucinated imports when it is saved."
+        },
+        "importguard.pythonPath": {
+          "type": "string",
+          "default": "python3",
+          "description": "Path to the Python interpreter used to verify that Python imports exist in the active environment."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.3"
+  }
+}
