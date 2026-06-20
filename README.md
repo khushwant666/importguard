@@ -93,3 +93,22 @@ Marketplace with `vsce publish`.
   installed in `node_modules`.
 - Python checking requires the configured interpreter to be the one your project
   actually uses.
+
+## Author
+
+Created and maintained by **Khushwant R.**
+
+## Contributing
+
+This is a source-available project, not open source. Issues and feature requests
+are welcome via [GitHub Issues](https://github.com/khushwant666/importguard/issues),
+but the code is **not** licensed for reuse, modification, or redistribution.
+Pull requests are accepted at the author's discretion and only the author can
+merge to `main` and publish releases.
+
+## License
+
+**Proprietary — All Rights Reserved.** The source is published for transparency
+and evaluation only. You may view it and use the official extension from the
+Marketplace, but you may **not** copy, modify, redistribute, or republish it.
+See the [LICENSE](./LICENSE) file for full terms.
