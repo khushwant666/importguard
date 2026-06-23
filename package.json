@@ -2,7 +2,7 @@
   "name": "importguard",
   "displayName": "ImportGuard - Catch AI Hallucinated Imports",
   "description": "Flags imports that don't exist to catch AI assistant hallucinations before they hit production. Scans JS/TS/Angular/Python files for packages and modules that aren't actually installed or don't exist.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "khushwant-r",
   "icon": "images/icon.png",
   "author": {
